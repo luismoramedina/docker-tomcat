@@ -1,0 +1,13 @@
+= Docker tomcat
+
+Simple docker image with war's download mechanism on start
+
+== Use
+
+docker build . -t tomcat8webwar
+docker run -p 7777:8080 -e ARTIFACT_URL=http://web/mywar.war tomcat8webwar
+open http://localhost:7777/mywar
+
+== TODO
+
+. error handling on download
